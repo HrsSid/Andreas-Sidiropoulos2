@@ -1,0 +1,77 @@
+site_name: Δρ. Ανδρέας Σιδηρόπουλος - Κλινικός Καρδιολόγος
+theme:
+  name: material
+  icon:
+    logo: fontawesome/solid/staff-snake
+  # Default site language
+  language: el
+  # Site colors
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  plugins:
+    - offline # offline support
+    # cpu optimization
+    - optimize:
+      concurrency: 1
+  # all the features the website uses
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - navigation.tracking
+    - header.autohide
+    - toc.integrate
+    - toc.follow
+    - navigation.top
+    - search.suggest
+    - content.tabs.link
+
+# like features but for markdown (more styles)
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  generator: false
+  # link to send email
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:achsid@gmail.com?subject=
+      name: achsid@gmail.com
+
+extra_javascript:
+  - javaScript.js
+
+extra_css:
+  - css.css
+
+copyright: |
+  &copy; 2023 - <a target="_blank" href="https://github.com/HrsSid">Harrys Sidiropoulos</a> <a target="_blank" href="https://github.com/HrsSid">
